@@ -1,0 +1,63 @@
+.online-services {
+    padding: 5rem 0;
+    background-color: $mainColor;
+    color: #fff;
+
+    &__title {
+        color: inherit;
+        text-transform: none;
+        margin-bottom: 1.2rem;
+    }
+
+    &__subtitle {
+        margin-bottom: 6rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 3rem;
+        }
+        &.text {
+            line-height: 1.21em;
+        }
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 80.4rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        & > li {
+            flex: 0 1 33.3333333%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            &:not(:nth-child(3n + 3)) {
+                border-right: 1px solid #fff;
+            }
+
+            & img, & svg {
+                height: 9.6rem;
+                width: auto;
+
+                @media (max-width: $md3+px) {
+                    height: 5.6rem;
+                }
+            }
+
+            & a {
+                 color: inherit !important;
+
+                 
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                 
+            }
+        }
+    }
+}

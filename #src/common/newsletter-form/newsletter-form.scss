@@ -1,0 +1,30 @@
+.newsletter-form {
+    & .form__title {
+        margin-bottom: 2.6rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    & .form__subtitle {
+        margin-bottom: 9.6rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    & .form__body {
+        margin-bottom: 8rem;
+        max-width: 61.5rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    & .form__submit {
+        max-width: 61.5rem;
+    }
+}

@@ -1,0 +1,190 @@
+.form {
+    background-color: #fff;
+    box-shadow: $shadow;
+    padding: 5.4rem 4rem 4.2rem;
+
+    @media (max-width: $md3+px) {
+        padding: 4rem 2rem;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+
+    &__subtitle {
+        color: $textColorSecondary;
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 1.21em;
+        margin-bottom: 2.5rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 2.2rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        width: 100%;
+        max-width: 71.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+
+        @media (max-width: $md3+px) {
+            display: block;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__col-1 {
+        @media (min-width: 768px) {
+            max-width: 27.5rem;
+            width: 100%;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__col-2 {
+        @media (min-width: 768px) {
+            max-width: 27.5rem;
+            width: 100%;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    &__item {
+        flex: 0 1 100%;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        line-height: 1.58em;
+        letter-spacing: 0.05em;
+    }
+
+    &__bottom {
+        text-align: center;
+    }
+
+    &__submit {
+
+        @media (max-width: $md3+px) {
+            width: 100%;
+        }
+    }
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    height: 2.7rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #868686;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.58em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $textColor;
+
+
+    &::placeholder {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #5B5959;
+    }
+}
+.textarea {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    height: 15.6rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #868686;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.58em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $textColor;
+    resize: none;
+
+
+    &::placeholder {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #5B5959;
+    }
+
+    &::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #4e4e4e;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgb(214, 214, 214);
+		border-radius: 10px;
+		box-shadow: inset 0px 0px 0px 0px #fff;
+	}
+}
+
+.checkbox-radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked ~ {
+            & .checkbox-radio__square {
+                background-color: $mainColor;
+                border-color: $mainColor;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjk5OTk5OSA0LjYzNTg4TDIuNDc0NzEgNi4xMTA1OUMyLjg2NTIzIDYuNTAxMTEgMy40OTg0IDYuNTAxMTEgMy44ODg5MiA2LjExMDU5TDkgMC45OTk1MTIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==");
+            }
+        }
+    }
+
+    &__square {
+        flex: 0 0 auto;
+        height: 1.2rem;
+        width: 1.2rem;
+        border: 1px solid $mainColor;
+        margin-right: 1rem;
+        background-position: center;
+        background-size: 85%;
+        background-repeat: no-repeat;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+}

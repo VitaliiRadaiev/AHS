@@ -1,0 +1,39 @@
+.slider-button {
+    transition: all .3s ease;
+    cursor: pointer;
+    width: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    @media (min-width: 992px) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &.swiper-button-lock {
+        display: none;
+    }
+
+    & svg, & img {
+        width: 100%;
+        height: auto;
+        & path { 
+            fill: transparent;
+            stroke: currentColor;
+        }
+    }
+
+    &--prev {
+        left: 0;
+    }
+
+    &--next {
+        right: 0;
+    }
+}

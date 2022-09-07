@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "AHS"
+})
+
+<body style="background-image: url('img/photo/main-bg.png');">
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		@@include('common/header/_header.html',{
+		"mod": ""
+		})
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page home-page" data-padding-top-header-size>
+			<div class="padding-wrap pt-0">
+				@@include('common/promo-header/_promo-header.html')
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/about-section/_about-section.html')
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/services-section/_services-section.html')
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/our-projects/_our-projects.html')
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					<section class="steps-section">
+						<h2 class="steps-section__title title-3 text-center title-space">How do we work?</h2>
+						<ul class="steps-section__list">
+							<li>
+								<div class="step-card">
+									<div class="step-card__icon">
+										<img src="img/icons/step-card-icon-1.svg" alt="">
+									</div>
+									<div class="step-card__title">Contact Us</div>
+									<div class="step-card__text text-sm">
+										Please contact us via phone or contact form on the website. WE will answer
+										within working hours
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="step-card">
+									<div class="step-card__icon">
+										<img src="img/icons/step-card-icon-2.svg" alt="">
+									</div>
+									<div class="step-card__title">Free Estimate</div>
+									<div class="step-card__text text-sm">
+										On the photo or during the visit we will discuss your project, pricing and
+										answer your questions
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="step-card">
+									<div class="step-card__icon">
+										<img src="img/icons/step-card-icon-3.svg" alt="">
+									</div>
+									<div class="step-card__title">
+										Service Appointment
+									</div>
+									<div class="step-card__text text-sm">
+										Next we can schedule a service appointment to start your project
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/services-by-room/_services-by-room.html')
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/advantages/_advantages.html')
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/newsletter-form/_newsletter-form.html')
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/testimonials/_testimonials.html')
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/online-services/_online-services.html')
+			</div>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		<div class="padding-wrap">
+			<div class="container">
+				@@include('common/footer/_footer.html',{})
+			</div>
+		</div>
+		<!-- == // FOOTER ================== -->
+		@@include('common/cookies-message/_cookies-message.html',{})
+		
+	</div>
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

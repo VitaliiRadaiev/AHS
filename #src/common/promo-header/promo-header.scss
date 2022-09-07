@@ -1,0 +1,72 @@
+.promo-header {
+
+    &__top {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #000;
+
+        & img {
+            opacity: 0.8;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        min-height: 78.6rem;
+        color: #fff;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        @media (max-width: $md3+px) {
+            min-height: 60rem;
+            
+        }
+    }
+
+    &__title {
+        color: inherit;
+        @media (max-width: $md3+px) {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.4rem 4.5rem;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+
+            & > * {
+                width: 100%;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: -6rem;
+        position: relative;
+        z-index: 3;
+    }
+}
+
+
+.promo-header-form {
+
+
+}
+

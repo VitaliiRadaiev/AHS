@@ -1,0 +1,88 @@
+.steps-section {
+    &__title {
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem 2rem;
+
+        & > li {
+            flex: 0 1 calc(33.3333333% - (2rem * 2 / 3));
+
+
+            &:nth-child(3n + 3) {
+                & .step-card__icon::before {
+                    display: none;
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+}
+
+.step-card {
+    height: 100%;
+    text-align: center;
+
+    &__icon {
+        margin: 0 auto 1.4rem;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: $titleColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.7rem;
+        position: relative;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 30.9rem;
+            height: 2.4rem;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzA5IiBoZWlnaHQ9IjIzIiB2aWV3Qm94PSIwIDAgMzA5IDIzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8bWFzayBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMCIgaGVpZ2h0PSIwIiBmaWxsPSJibGFjayI+CjxyZWN0IGZpbGw9IndoaXRlIiB3aWR0aD0iMCIgaGVpZ2h0PSIwIi8+CjwvbWFzaz4KPHBhdGggZD0iTTAuNDM5MzQgMTAuNDM5M0MtMC4xNDY0NDcgMTEuMDI1MSAtMC4xNDY0NDcgMTEuOTc0OSAwLjQzOTM0IDEyLjU2MDdMOS45ODUyOCAyMi4xMDY2QzEwLjU3MTEgMjIuNjkyNCAxMS41MjA4IDIyLjY5MjQgMTIuMTA2NiAyMi4xMDY2QzEyLjY5MjQgMjEuNTIwOCAxMi42OTI0IDIwLjU3MTEgMTIuMTA2NiAxOS45ODUzTDMuNjIxMzIgMTEuNUwxMi4xMDY2IDMuMDE0NzJDMTIuNjkyNCAyLjQyODkzIDEyLjY5MjQgMS40NzkxOSAxMi4xMDY2IDAuODkzMzk4QzExLjUyMDggMC4zMDc2MTEgMTAuNTcxMSAwLjMwNzYxMSA5Ljk4NTI4IDAuODkzMzk4TDAuNDM5MzQgMTAuNDM5M1pNMzA4LjU2MSAxMi41NjA3QzMwOS4xNDYgMTEuOTc0OSAzMDkuMTQ2IDExLjAyNTEgMzA4LjU2MSAxMC40MzkzTDI5OS4wMTUgMC44OTMzOThDMjk4LjQyOSAwLjMwNzYxMSAyOTcuNDc5IDAuMzA3NjExIDI5Ni44OTMgMC44OTMzOThDMjk2LjMwOCAxLjQ3OTE5IDI5Ni4zMDggMi40Mjg5MyAyOTYuODkzIDMuMDE0NzJMMzA1LjM3OSAxMS41TDI5Ni44OTMgMTkuOTg1M0MyOTYuMzA4IDIwLjU3MTEgMjk2LjMwOCAyMS41MjA4IDI5Ni44OTMgMjIuMTA2NkMyOTcuNDc5IDIyLjY5MjQgMjk4LjQyOSAyMi42OTI0IDI5OS4wMTUgMjIuMTA2NkwzMDguNTYxIDEyLjU2MDdaTTEuNSAxM0g0LjQ0MjMxVjEwSDEuNVYxM1pNMTAuMzI2OSAxM0gxNi4yMTE1VjEwSDEwLjMyNjlWMTNaTTIyLjA5NjIgMTNIMjcuOTgwOFYxMEgyMi4wOTYyVjEzWk0zMy44NjU0IDEzSDM5Ljc1VjEwSDMzLjg2NTRWMTNaTTQ1LjYzNDYgMTNINTEuNTE5MlYxMEg0NS42MzQ2VjEzWk01Ny40MDM5IDEzSDYzLjI4ODVWMTBINTcuNDAzOVYxM1pNNjkuMTczMSAxM0g3NS4wNTc3VjEwSDY5LjE3MzFWMTNaTTgwLjk0MjMgMTNIODYuODI2OVYxMEg4MC45NDIzVjEzWk05Mi43MTE1IDEzSDk4LjU5NjFWMTBIOTIuNzExNVYxM1pNMTA0LjQ4MSAxM0gxMTAuMzY1VjEwSDEwNC40ODFWMTNaTTExNi4yNSAxM0gxMjIuMTM1VjEwSDExNi4yNVYxM1pNMTI4LjAxOSAxM0gxMzMuOTA0VjEwSDEyOC4wMTlWMTNaTTEzOS43ODggMTNIMTQ1LjY3M1YxMEgxMzkuNzg4VjEzWk0xNTEuNTU4IDEzSDE1Ny40NDJWMTBIMTUxLjU1OFYxM1pNMTYzLjMyNyAxM0gxNjkuMjEyVjEwSDE2My4zMjdWMTNaTTE3NS4wOTYgMTNIMTgwLjk4MVYxMEgxNzUuMDk2VjEzWk0xODYuODY1IDEzSDE5Mi43NVYxMEgxODYuODY1VjEzWk0xOTguNjM1IDEzSDIwNC41MTlWMTBIMTk4LjYzNVYxM1pNMjEwLjQwNCAxM0gyMTYuMjg4VjEwSDIxMC40MDRWMTNaTTIyMi4xNzMgMTNIMjI4LjA1OFYxMEgyMjIuMTczVjEzWk0yMzMuOTQyIDEzSDIzOS44MjdWMTBIMjMzLjk0MlYxM1pNMjQ1LjcxMSAxM0gyNTEuNTk2VjEwSDI0NS43MTFWMTNaTTI1Ny40ODEgMTNIMjYzLjM2NVYxMEgyNTcuNDgxVjEzWk0yNjkuMjUgMTNIMjc1LjEzNVYxMEgyNjkuMjVWMTNaTTI4MS4wMTkgMTNIMjg2LjkwNFYxMEgyODEuMDE5VjEzWk0yOTIuNzg4IDEzSDI5OC42NzNWMTBIMjkyLjc4OFYxM1pNMzA0LjU1OCAxM0gzMDcuNVYxMEgzMDQuNTU4VjEzWiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC41IiBtYXNrPSJ1cmwoIykiLz4KPC9zdmc+Cg==');
+            transform: translateY(-50%);
+            background-position: center right;
+            background-size: auto 100%;
+
+            @media (max-width: $md2+px) {
+                width: 28rem;
+            }
+
+            @media (max-width: $md3+px) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.23em;
+        color: $textColorSecondary;
+        margin-bottom: 2.2rem;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 22.5rem;
+    }
+}

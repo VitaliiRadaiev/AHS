@@ -1,0 +1,58 @@
+.cookies-message {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $mainColor;
+    transition: all 0.4s ease;
+    z-index: 47;
+    transform: translateY(102%);
+
+    &.show {
+        transform: translateY(0%);
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        min-height: 10rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        @media (max-width: $md3+px) {
+            min-height: 7rem;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.58em;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 2rem;
+        flex: 0 1 100%;
+    }
+
+    & a {
+        margin: 0 15px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.58em;
+        text-decoration-line: underline;
+        color: #ffffff !important;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+}
