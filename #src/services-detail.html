@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "AHS"
+})
+
+<body style="background-image: url('img/photo/main-bg.png');">
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		@@include('common/header/_header.html',{
+		"mod": ""
+		})
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page services-detail-page" data-padding-top-header-size>
+			<div class="padding-wrap pt-0">
+				@@include('common/promo-header/_promo-header.html')
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					<section class="services-details">
+                        <h2 class="services-details__title title-3 text-center title-space">
+                            Plumbing
+                        </h2>
+                        <div class="services-details__head">
+                            <div class="services-details__head-text title-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            </div>
+                            <div class="services-details__head-img ibg">
+                                <img src="img/photo/plumbing-img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="services-details__text text-content text-md last">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </section>
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/services-by-room/_services-by-room.html')
+				</div>
+			</div>
+			
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/newsletter-form/_newsletter-form.html')
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/testimonials/_testimonials.html')
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/online-services/_online-services.html')
+			</div>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		<div class="padding-wrap">
+			<div class="container">
+				@@include('common/footer/_footer.html',{})
+			</div>
+		</div>
+		<!-- == // FOOTER ================== -->
+		@@include('common/cookies-message/_cookies-message.html',{})
+		
+	</div>
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

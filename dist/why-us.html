@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AHS</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body style="background-image: url('img/photo/main-bg.png');">
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		<header class="header" data-header>
+    <div class="header__row-1">
+        <div class="header__top container">
+            <div class="header__top-left">
+                <div class="header__top-logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="header__top-text">
+                    Top Rated Constriction &
+                    Handyman Services in NJ, NY
+                </div>
+            </div>
+            <div class="header__top-right">
+                <a href="#" class="header__phone">
+                    <div class="header__phone-icon">
+                        <img class="img-svg" src="img/icons/phone.svg" alt="">
+                    </div>
+                    <div class="header__phone-inner">
+                        <div class="header__phone-label">Call Today</div>
+                        <div class="header__phone-num">(201) 222-3333</div>
+                    </div>
+                </a>
+                <div class="header__burger burger" data-action="open-mobile-menu">
+                    <span class="burger__cross"></span>
+                    <span class="burger__cross"></span>
+                    <span class="burger__cross"></span>
+                    <span class="burger__cross"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__row-2">
+        <div class="header__body container">
+            <div class="header__menu menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="#" class="menu__link current-menu-item">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="menu__link ">Services item 1</a></li>
+                            <li><a href="#" class="menu__link ">Services item 2</a></li>
+                            <li><a href="#" class="menu__link ">Services item 3</a></li>
+                            <li><a href="#" class="menu__link ">Services item 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link">Why us</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="menu__link ">Why us item 1</a></li>
+                            <li><a href="#" class="menu__link ">Why us item 2</a></li>
+                            <li><a href="#" class="menu__link ">Why us item 3</a></li>
+                            <li><a href="#" class="menu__link ">Why us item 4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <ul class="header__social social">
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/linkedin.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+    <div class="menu">
+        <div class="menu__head">
+            <div class="menu__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="menu__close" data-action="close-mobile-menu">
+                <span></span>
+            </div>
+
+        </div>
+        <div class="menu__scroll-wrap">
+
+            <ul class="menu__list">
+                <li>
+                    <a href="#" class="menu__link current-menu-item">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">About</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="menu__link">Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="menu__link ">Services item 1</a></li>
+                        <li><a href="#" class="menu__link ">Services item 2</a></li>
+                        <li><a href="#" class="menu__link ">Services item 3</a></li>
+                        <li><a href="#" class="menu__link ">Services item 4</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="menu__link">Why us</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="menu__link ">Why us item 1</a></li>
+                        <li><a href="#" class="menu__link ">Why us item 2</a></li>
+                        <li><a href="#" class="menu__link ">Why us item 3</a></li>
+                        <li><a href="#" class="menu__link ">Why us item 4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Contact Us</a>
+                </li>
+
+            </ul>
+
+            <div class="menu__bottom">
+                <ul class="social">
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page why-us-page" data-padding-top-header-size>
+			<div class="padding-wrap pt-0">
+				<section class="promo-header">
+    <div class="promo-header__top">
+        <div class="promo-header__bg ibg">
+            <img src="img/photo/promo-header-bg.jpg" alt="">
+        </div>
+        <div class="promo-header__body container">
+            <h1 class="promo-header__title title-1">Lorem Ipsum</h1>
+            <div class="promo-header__buttons">
+                <a href="#" class="btn-default btn-default--sm">Request a call</a>
+                <a href="#" class="btn-default btn-default--sm">Request a service</a>
+            </div>
+        </div>
+    </div>
+    <div class="promo-header__bottom container">
+        <form action="/">
+            <div class="promo-header-form form">
+                <h2 class="form__title title-2 text-center">
+                    request a call
+                </h2>
+                <div class="form__subtitle text-center">
+                    We are here to help.
+                </div>
+                <div class="form__body">
+                    <div class="form__col-1">
+                        <div class="form__items">
+                            <div class="form__item">
+                                <label class="form__label">Name</label>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label">Zip code</label>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label">Phone</label>
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__col-2">
+                        <div class="form__items">
+                            <div class="form__item">
+                                <label class="form__label">Message</label>
+                                <textarea class="textarea" placeholder="Info about required work"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__bottom">
+                    <button class="form__submit btn-default btn-default--md">
+                        Call me back
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					<section class="advantages">
+    <h2 class="advantages__title title-3 text-center title-space">
+        WHY DO CLIENT CHOOSE AHS?
+    </h2>
+    <ul class="main-grid">
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-1.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Professional Approach
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-2.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Fair Pricing
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-3.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Whole Home Improvement Team
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-4.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Right Service Technicians
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-5.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Worry Free Experience
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-6.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        We are local
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-7.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Experienced Stuff
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-8.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Strong Ethics &
+                        Service Standards
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="advantages-card">
+                <div class="advantages-card__layer-1">
+                    <div class="advantages-card__icon">
+                        <img src="img/photo/advantages-card-icon-9.svg" alt="">
+                    </div>
+                    <div class="advantages-card__title">
+                        Respect
+                    </div>
+                </div>
+                <div class="advantages-card__layer-2">
+                    <div class="advantages-card__text">
+                        We offer affordable transparent pricing. We treat all clients with respect!
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				<div class="container">
+					<form action="/">
+    <div class="newsletter-form form">
+        <h2 class="form__title title-2 text-center">
+            Sign Up for our Email list 
+        </h2>
+        <div class="form__subtitle text-center">
+            With our occasional tips and offers via email 
+        </div>
+        <div class="form__body">
+            <div class="form__col-1">
+                <div class="form__items">
+                    <div class="form__item">
+                        <label class="form__label">First & Last Name</label>
+                        <input type="text" class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="form__col-2">
+                <div class="form__items">
+                    <div class="form__item">
+                        <label class="form__label">Email</label>
+                        <input type="email" class="input">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form__bottom">
+            <button class="form__submit btn-default btn-default--md">
+                Sign up
+            </button>
+        </div>
+    </div>
+</form>
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				<section class="testimonials">
+    <div class="container">
+        <h2 class="testimonials__title title-3 text-center title-space">
+            Verified testimonials
+        </h2>
+        <div class="testimonials__slider" data-slider="testimonials-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__head">
+                                <div class="testimonial-card__photo ibg">
+                                    <img src="img/photo/testimonial-img.jpg" alt="">
+                                </div>
+                                <div class="testimonial-card__inner">
+                                    <div>
+                                        <div class="testimonial-card__name">
+                                            MARK  LEFO
+                                        </div>
+                                        <div class="testimonial-card__position">
+                                            New Jersey
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-card__rating">
+                                        <div class="rating" data-rating="4">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card__head-line">
+                                    <img src="img/photo/line.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="testimonial-card__text text last">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__head">
+                                <div class="testimonial-card__photo ibg">
+                                    <img src="img/photo/testimonial-img.jpg" alt="">
+                                </div>
+                                <div class="testimonial-card__inner">
+                                    <div>
+                                        <div class="testimonial-card__name">
+                                            MARK  LEFO
+                                        </div>
+                                        <div class="testimonial-card__position">
+                                            New Jersey
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-card__rating">
+                                        <div class="rating" data-rating="5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card__head-line">
+                                    <img src="img/photo/line.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="testimonial-card__text text last">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__head">
+                                <div class="testimonial-card__photo ibg">
+                                    <img src="img/photo/testimonial-img.jpg" alt="">
+                                </div>
+                                <div class="testimonial-card__inner">
+                                    <div>
+                                        <div class="testimonial-card__name">
+                                            MARK  LEFO
+                                        </div>
+                                        <div class="testimonial-card__position">
+                                            New Jersey
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-card__rating">
+                                        <div class="rating" data-rating="3">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card__head-line">
+                                    <img src="img/photo/line.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="testimonial-card__text text last">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__head">
+                                <div class="testimonial-card__photo ibg">
+                                    <img src="img/photo/testimonial-img.jpg" alt="">
+                                </div>
+                                <div class="testimonial-card__inner">
+                                    <div>
+                                        <div class="testimonial-card__name">
+                                            MARK  LEFO
+                                        </div>
+                                        <div class="testimonial-card__position">
+                                            New Jersey
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-card__rating">
+                                        <div class="rating" data-rating="4.5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card__head-line">
+                                    <img src="img/photo/line.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="testimonial-card__text text last">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__head">
+                                <div class="testimonial-card__photo ibg">
+                                    <img src="img/photo/testimonial-img.jpg" alt="">
+                                </div>
+                                <div class="testimonial-card__inner">
+                                    <div>
+                                        <div class="testimonial-card__name">
+                                            MARK  LEFO
+                                        </div>
+                                        <div class="testimonial-card__position">
+                                            New Jersey
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-card__rating">
+                                        <div class="rating" data-rating="4">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card__head-line">
+                                    <img src="img/photo/line.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="testimonial-card__text text last">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="slider-button slider-button--prev hover" data-action="btn-prev">
+    <img class="img-svg" src="img/icons/arrow-left.svg" alt="">
+</div>
+<div class="slider-button slider-button--next hover" data-action="btn-next">
+    <img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+</div>
+        </div>
+    </div>
+</section>
+			</div>
+			
+			<div class="padding-wrap">
+				<section class="online-services">
+    <div class="container">
+        <h3 class="online-services__title title-4 text-center">
+            Review us online
+        </h3>
+        <div class="online-services__subtitle text text-center">
+            We value your opinion. Please Click an icon to leave a review on Google, Facebook or Yelp.
+        </div>
+        <ul class="online-services__list">
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/yelp.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/google.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+			</div>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		<div class="padding-wrap">
+			<div class="container">
+				<footer class="footer">
+    <ul class="footer__nav">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Service</a>
+        </li>
+        <li>
+            <a href="#">Why us</a>
+        </li>
+        <li>
+            <a href="#">FAQ</a>
+        </li>
+        <li>
+            <a href="#">Contact Us</a>
+        </li>
+    </ul>
+    <ul class="footer__contacts">
+        <li>
+            <a href="#" class="footer__contacts-item">
+                <div class="footer__contacts-icon">
+                    <img class="img-svg" src="img/icons/phone.svg" alt="">
+                </div>
+                <div class="footer__contacts-inner">
+                    <div class="footer__contacts-label">
+                        Call Today
+                    </div>
+                    <div class="footer__contacts-text">
+                        (201) 222-3333
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <div class="footer__contacts-item">
+                <div class="footer__contacts-icon">
+                    <img class="img-svg" src="img/icons/marker.svg" alt="">
+                </div>
+                <div class="footer__contacts-inner">
+                    <div class="footer__contacts-text text-start">
+                        999 Handyman Ave. <br>
+                        Ramsey NJ 07446
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="footer__contacts-item">
+                <div class="footer__contacts-icon">
+                    <img class="img-svg" src="img/icons/email.svg" alt="">
+                </div>
+                <div class="footer__contacts-inner">
+                    <div class="footer__contacts-label">
+                        Ask a Question
+                    </div>
+                    <div class="footer__contacts-text">
+                        ahs@handyman.com
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="footer__bottom">
+        <div class="footer__text">
+            Website design, website building and digital presence by AHS
+        </div>
+        <a href="#" class="footer__link">REPORT A BUG
+        </a>
+    </div>
+</footer>
+			</div>
+		</div>
+		<!-- == // FOOTER ================== -->
+		<div class="cookies-message" id="cookieMessage">
+    <div class="container cookies-message__body">
+        <div class="cookies-message__text">
+            This website uses cookies to provide better user experience 
+        </div>
+        <a href="#" class="cookies-message__agree" data-action="close-cookies-message">
+            <img src="img/icons/check-solid.svg" alt="" class="img-svg">
+            AGREE
+        </a>
+        <a href="#" class="cookies-message__disagree" data-action="close-cookies-message">
+            <img src="img/icons/times-solid.svg" alt="" class="img-svg">
+            DISAGREE
+        </a>
+    </div>
+</div>
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+</body>
+
+</html>

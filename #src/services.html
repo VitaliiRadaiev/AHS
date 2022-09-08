@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "AHS"
+})
+
+<body style="background-image: url('img/photo/main-bg.png');">
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		@@include('common/header/_header.html',{
+		"mod": ""
+		})
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page services-page" data-padding-top-header-size>
+			<div class="padding-wrap pt-0">
+				@@include('common/promo-header/_promo-header.html')
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/services-section/_services-section.html')
+				</div>
+			</div>
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/services-by-room/_services-by-room.html')
+				</div>
+			</div>
+			
+
+			<div class="padding-wrap">
+				<div class="container">
+					@@include('common/newsletter-form/_newsletter-form.html')
+				</div>
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/testimonials/_testimonials.html')
+			</div>
+			
+			<div class="padding-wrap">
+				@@include('common/online-services/_online-services.html')
+			</div>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		<div class="padding-wrap">
+			<div class="container">
+				@@include('common/footer/_footer.html',{})
+			</div>
+		</div>
+		<!-- == // FOOTER ================== -->
+		@@include('common/cookies-message/_cookies-message.html',{})
+		
+	</div>
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

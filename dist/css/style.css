@@ -4779,6 +4779,32 @@ figure {
   max-width: 22.5rem;
 }
 
+.services-details__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.6rem;
+  margin-bottom: 3.6rem;
+}
+
+.services-details__head-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 1.47em !important;
+  padding-top: 2.5rem;
+  padding-left: 3.5rem;
+  border-top: 1px solid #AE0000;
+  border-left: 1px solid #AE0000;
+}
+
+.services-details__head-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  min-height: 36.8rem;
+}
+
 @media (min-width: 576px) {
   .w-sm-auto {
     width: auto !important;
@@ -5281,6 +5307,17 @@ figure {
 
   .step-card__icon:before {
     display: none;
+  }
+
+  .services-details__head {
+    display: block;
+    margin-bottom: 2.4rem;
+  }
+
+  .services-details__head-text {
+    border: none;
+    padding: 0;
+    margin-bottom: 2.4rem;
   }
 }
 
