@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "AHS"
+})
+
+<body style="background-image: url('img/photo/main-bg.png');">
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": ""
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page request-service-page" data-padding-top-header-size>
+            <div class="padding-wrap pt-0">
+                <section class="promo-header">
+                    <div class="promo-header__top">
+                        <div class="promo-header__bg ibg">
+                            <img src="img/photo/promo-header-bg.jpg" alt="">
+                        </div>
+                        <div class="promo-header__body container">
+                            <h1 class="promo-header__title title-1">Lorem Ipsum</h1>
+                            <div class="promo-header__buttons">
+                                <a href="#" class="btn-default btn-default--sm">Request a call</a>
+                                <a href="#" class="btn-default btn-default--sm">Request a service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-header__bottom container">
+                        <form action="/">
+                            <div class="promo-header-form form request-service">
+                                <h2 class="form__title title-2 text-center">
+                                    request service 
+                                </h2>
+                                <div class="form__subtitle text-center">
+                                    We are here to help.
+                                </div>
+                                <div class="form__body">
+                                    <div class="form__col-1">
+                                        <h3 class="form__title-2 title-5">
+                                            <img src="img/icons/circle-1.svg" alt="">
+                                            Information about you:
+                                        </h3>
+                                        <div class="form__items">
+                                            <div class="form__item">
+                                                <label class="form__label">First Name</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">Last Name</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item" data-mask="9{*}">
+                                                <label class="form__label">Phone</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">Email</label>
+                                                <input type="email" class="input">
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">Address</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">City</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">State</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                            <div class="form__item" data-mask="9{*}">
+                                                <label class="form__label">Zip code</label>
+                                                <input type="text" class="input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__col-2">
+                                        <h3 class="form__title-2 title-5">
+                                            <img src="img/icons/circle-2.svg" alt="">
+                                            Service Type:
+                                        </h3>
+                                        <div class="form__items">
+                                            <div class="form__item">
+                                                <label class="form__label">Message</label>
+                                                <textarea class="textarea textarea--md" placeholder="We are here to help"></textarea>
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label">Upload up to 3  images of your project</label>
+                                                <label class="file-input">
+                                                    <input type="file" accept=".jpg, .jpeg, .png">
+                                                    <img class="img-svg" src="img/icons/clip.svg" alt="">
+
+                                                    <div class="file-input__text">
+                                                        Upload the file
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label"></label>
+                                                <label class="file-input">
+                                                    <input type="file" accept=".jpg, .jpeg, .png">
+                                                    <img class="img-svg" src="img/icons/clip.svg" alt="">
+
+                                                    <div class="file-input__text">
+                                                        Upload the file
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label"></label>
+                                                <label class="file-input">
+                                                    <input type="file" accept=".jpg, .jpeg, .png">
+                                                    <img class="img-svg" src="img/icons/clip.svg" alt="">
+
+                                                    <div class="file-input__text">
+                                                        Upload the file
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form__item">
+                                                <label class="form__label"></label>
+                                                <div class="form__text text-md">
+                                                    Total file size cannot exceed 10 MB and must be .png, .jpg or jpeg format
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__bottom">
+                                    <button class="form__submit btn-default btn-default--md">
+                                        Submit form
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <div class="padding-wrap">
+                <div class="container">
+                    @@include('common/newsletter-form/_newsletter-form.html')
+                </div>
+            </div>
+
+            <div class="padding-wrap">
+                @@include('common/online-services/_online-services.html')
+            </div>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        <div class="padding-wrap">
+            <div class="container">
+                @@include('common/footer/_footer.html',{})
+            </div>
+        </div>
+        <!-- == // FOOTER ================== -->
+        @@include('common/cookies-message/_cookies-message.html',{})
+
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

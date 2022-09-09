@@ -262,6 +262,7 @@ class App {
 		@@include('../common/promo-header/promo-header.js')
 		@@include('../common/rating/rating.js')
 		@@include('../common/cookies-message/cookies-message.js')
+		@@include('../common/input-file/input-file.js')
 	}
 
 	componentsAfterLoad() {

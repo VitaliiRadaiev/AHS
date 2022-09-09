@@ -1,0 +1,51 @@
+.request-service.form {
+
+    @media (min-width: 768px) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+
+        & .form__subtitle {
+            margin-bottom: 10.5rem;
+        }
+
+        & .form__body {
+            max-width: none;
+        }
+    
+        & .form__col-1 {
+            max-width: 40.2rem;
+        }
+    
+        & .form__col-2 {
+            max-width: 39rem;
+        }
+    }
+
+    @media (max-width: $md3+px) {
+        & .form__col-1 {
+            margin-bottom: 4rem;
+        }
+    }
+
+    & .form__items {
+        gap: 1.7rem;
+    }
+
+    & .form__label {
+        font-size: 1.8rem;
+        line-height: 1.22em;
+        margin-bottom: 0.7rem;
+        min-height: 0.92em;
+
+        @media (max-width: $md3+px) {
+            &:empty {
+                display: none;
+            }
+        }
+    }
+    
+    & .input {
+        height: 3.6rem;
+    }
+
+}

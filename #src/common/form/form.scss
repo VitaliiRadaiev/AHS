@@ -11,6 +11,25 @@
         margin-bottom: 0.5rem;
     }
 
+    &__title-2 {
+        display: flex;
+        align-items: center;
+        text-transform: none;
+        gap: 0.7rem;
+        margin-bottom: 3.8rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 2.4rem;
+        }
+
+        & img,
+        & svg {
+            flex: 0 0 auto;
+            width: 5.2rem;
+            height: auto;
+        }
+    }
+
     &__subtitle {
         color: $textColorSecondary;
         font-weight: 400;
@@ -72,6 +91,7 @@
         font-size: 1.4rem;
         line-height: 1.58em;
         letter-spacing: 0.05em;
+        min-height: 1.58em;
     }
 
     &__bottom {
@@ -79,10 +99,13 @@
     }
 
     &__submit {
-
         @media (max-width: $md3+px) {
             width: 100%;
         }
+    }
+
+    &__text {
+        color: rgba(134, 134, 134, 0.5);
     }
 }
 
@@ -103,11 +126,10 @@
     letter-spacing: 0.05em;
     color: $textColor;
 
-
     &::placeholder {
         font-size: 1.2rem;
         font-weight: 400;
-        color: #5B5959;
+        color: #5b5959;
     }
 }
 .textarea {
@@ -128,27 +150,34 @@
     color: $textColor;
     resize: none;
 
+    &--md {
+        height: 28.3rem;
+
+        &::placeholder {
+            font-size: 1.8rem;
+        }
+    }
 
     &::placeholder {
         font-size: 1.2rem;
         font-weight: 400;
-        color: #5B5959;
+        color: #5b5959;
     }
 
     &::-webkit-scrollbar {
-		width: 4px;
-		height: 4px;
-	}
-	&::-webkit-scrollbar-thumb {
-		background: #4e4e4e;
-		border-radius: 10px;
-	}
+        width: 4px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #4e4e4e;
+        border-radius: 10px;
+    }
 
-	&::-webkit-scrollbar-track {
-		background: rgb(214, 214, 214);
-		border-radius: 10px;
-		box-shadow: inset 0px 0px 0px 0px #fff;
-	}
+    &::-webkit-scrollbar-track {
+        background: rgb(214, 214, 214);
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 0px 0px #fff;
+    }
 }
 
 .checkbox-radio {
