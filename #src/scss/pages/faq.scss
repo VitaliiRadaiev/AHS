@@ -1,0 +1,127 @@
+.faq {
+    &__title {
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        & > li {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+
+                @media (max-width: $md3+px) {
+                    margin-bottom: 4rem;
+                }
+            }
+
+            &:nth-child(even) {
+                @media (min-width: 768px) {
+                    & .faq-card {
+                        flex-direction: row-reverse;
+                    }
+
+                    & .faq-card__text-wrap {
+                        padding: 4.4rem 6.5rem 4.4rem 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faq-card {
+    display: flex;
+    background-color: #fff;
+    box-shadow: $shadow;
+
+    @media (max-width: $md3+px) {
+        display: block;
+    }
+
+    &__text-wrap {
+        flex: 1 1 auto;
+        padding: 4.4rem 6.3rem 4.4rem 4rem;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $md3+px) {
+            padding: 4rem 2rem;
+        }
+    }
+
+    &__img {
+        flex: 0 0 51.66%;
+        min-height: 49.8rem;
+
+        @media (max-width: $md3+px) {
+            min-height: auto;
+            height: 0;
+            padding-bottom: 80%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        padding-bottom: 1.4rem;
+        border-bottom: 1px solid #868686;
+        margin-bottom: 2.5rem;
+    }
+
+    &__photo {
+        flex: 0 0 auto;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__head-inner {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.8rem;
+        flex-wrap: wrap;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05em;
+    }
+
+    &__position {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05em;
+    }
+
+    &__date {
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05em;
+    }
+
+    &__text {
+        color: $textColorThird;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        margin-top: auto;
+
+        @media (min-width: 768px) {
+            align-self: flex-start;
+        }
+    }
+}

@@ -1,14 +1,41 @@
 .carousel {
-    &__head {
-        margin-bottom: 5rem;
+
+    position: relative;
+
+    & .swiper {
+        margin: -1rem;
+        padding: 1rem;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 36px;
+            overflow: visible;
         }
     }
-    &__slider {
-        border-bottom: 2px solid $borderColor;
-        padding-bottom: 2px;
-        margin-bottom: -2px;
+
+    & .swiper-wrapper {
+
+    }
+
+    & .swiper-slide {
+        height: auto;
+    }
+
+    & .slider-button {
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+        &--prev {
+            
+            
+                transform: translateX(calc(-100% - 2rem)) translateY(-50%);
+        }
+        &--next {
+            
+            
+                transform: translateX(calc(100% + 2rem)) translateY(-50%);
+        }
+    }
+
+    & .swiper-pagination {
+        padding-top: 3rem;
     }
 }

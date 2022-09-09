@@ -20,6 +20,11 @@
         display: none;
     }
 
+    &.swiper-button-disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
     & svg, & img {
         width: 100%;
         height: auto;

@@ -1,0 +1,141 @@
+.faq-detail {
+    &__title {
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem 4rem;
+        flex-wrap: wrap;
+        padding-bottom: 4.6rem;
+        border-bottom: 1px solid #868686;
+
+        @media (max-width: $md3+px) {
+            padding-bottom: 3.6rem;
+        }
+    }
+}
+
+.faq-detail {
+    &__meta {
+        padding-left: 0;
+        margin-bottom: 0;
+        font-weight: 300;
+    }
+
+    &__auhtor {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    &__auhtor-photo {
+        flex: 0 0 auto;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__auhtor-name {
+        font-weight:600;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05em;
+    }
+
+    &__auhtor-position {
+        font-size: 1.3rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05em;
+    }
+
+    &__social {
+        color: $titleColor;
+        
+        &.social {
+            gap: 2.4rem;
+        }
+        
+        @media (min-width: 768px) {
+            margin-left: auto;
+            position: relative;
+            padding-left: 3rem;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 3.8rem;
+                width: 1px;
+                background-color: $titleColor;
+            }
+        }
+    }
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000 !important;
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .post-card__img img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__img {
+        height: 0;
+        padding-bottom: 56.94%;
+        overflow: hidden;
+
+        & img {
+            transition: all 1s ease;
+            display: block;
+        }
+    }
+
+    &__text-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 2.4rem;
+    }
+
+    &__meta {
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        color: $textColorSecondary;
+    }
+
+    &__btn {
+        margin-top: auto;
+        align-self: center;
+        max-width: 28.4rem;
+    }
+}

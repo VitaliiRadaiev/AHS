@@ -116,4 +116,8 @@
             background-color: #04244D;
         }
     }
+
+    &.swiper-pagination-lock {
+        display: none;
+    }
 }
