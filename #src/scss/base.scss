@@ -64,6 +64,10 @@ body {
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 
+	@media (max-width: $md2+px) {
+		padding-bottom: 63px;
+	}
+
 	&:not(.mobile) {
 		& a:not(.not-hover):hover {
 			color: $hover;
@@ -354,7 +358,7 @@ figure {
 		padding-top: 11.9rem;
 	}
 	@media (max-width: $md3+px) {
-		padding-top: 9rem;
+		padding-top: 11rem;
 	}
 }
 
